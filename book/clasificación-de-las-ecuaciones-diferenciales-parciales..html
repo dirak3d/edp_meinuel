@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Ecuaciones diferenciales parciales</title>
+  <meta name="description" content="<p>This is a minimal example of using the bookdown package to write a book.
+set in the _output.yml file.
+The HTML output format for this example is bookdown::gitbook,</p>" />
+  <meta name="generator" content="bookdown 0.41 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Ecuaciones diferenciales parciales" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="<p>This is a minimal example of using the bookdown package to write a book.
+set in the _output.yml file.
+The HTML output format for this example is bookdown::gitbook,</p>" />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Ecuaciones diferenciales parciales" />
+  
+  <meta name="twitter:description" content="<p>This is a minimal example of using the bookdown package to write a book.
+set in the _output.yml file.
+The HTML output format for this example is bookdown::gitbook,</p>" />
+  
+
+<meta name="author" content="Alexis, Jesús y Eduardo" />
+
+
+<meta name="date" content="2024-11-29" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+
+<link rel="next" href="ecuaciones-diferenciales-parciales-de-primer-orden.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">A Minimal Book Example</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="clasificación-de-las-ecuaciones-diferenciales-parciales..html"><a href="clasificación-de-las-ecuaciones-diferenciales-parciales..html"><i class="fa fa-check"></i><b>1</b> Clasificación de las ecuaciones diferenciales parciales.</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="clasificación-de-las-ecuaciones-diferenciales-parciales..html"><a href="clasificación-de-las-ecuaciones-diferenciales-parciales..html#ecuaciones-diferenciales-con-dos-variables-independientes."><i class="fa fa-check"></i><b>1.1</b> Ecuaciones diferenciales con dos variables independientes.</a></li>
+<li class="chapter" data-level="1.2" data-path="clasificación-de-las-ecuaciones-diferenciales-parciales..html"><a href="clasificación-de-las-ecuaciones-diferenciales-parciales..html#ecuaciones-cuasi---lineales-lineales-y-no-lineales."><i class="fa fa-check"></i><b>1.2</b> Ecuaciones cuasi - lineales, lineales y no lineales.</a>
+<ul>
+<li class="chapter" data-level="1.2.1" data-path="clasificación-de-las-ecuaciones-diferenciales-parciales..html"><a href="clasificación-de-las-ecuaciones-diferenciales-parciales..html#forma-canónica-de-la-ecuación-de-onda."><i class="fa fa-check"></i><b>1.2.1</b> Forma Canónica de la ecuación de onda.</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="clasificación-de-las-ecuaciones-diferenciales-parciales..html"><a href="clasificación-de-las-ecuaciones-diferenciales-parciales..html#clasificacion-de-las-ecuaciones-diferenciales-parciales-de-segundo-orden."><i class="fa fa-check"></i><b>1.3</b> Clasificacion de las ecuaciones diferenciales parciales de segundo orden.</a>
+<ul>
+<li class="chapter" data-level="1.3.1" data-path="clasificación-de-las-ecuaciones-diferenciales-parciales..html"><a href="clasificación-de-las-ecuaciones-diferenciales-parciales..html#forma-canónica"><i class="fa fa-check"></i><b>1.3.1</b> Forma canónica</a></li>
+<li class="chapter" data-level="1.3.2" data-path="clasificación-de-las-ecuaciones-diferenciales-parciales..html"><a href="clasificación-de-las-ecuaciones-diferenciales-parciales..html#forma-canónica-de-las-ecuaciones-hiperbólicas"><i class="fa fa-check"></i><b>1.3.2</b> Forma canónica de las ecuaciones hiperbólicas</a></li>
+<li class="chapter" data-level="1.3.3" data-path="clasificación-de-las-ecuaciones-diferenciales-parciales..html"><a href="clasificación-de-las-ecuaciones-diferenciales-parciales..html#forma-canónica-de-las-ecuaciones-parabólicas"><i class="fa fa-check"></i><b>1.3.3</b> Forma canónica de las ecuaciones parabólicas</a></li>
+<li class="chapter" data-level="1.3.4" data-path="clasificación-de-las-ecuaciones-diferenciales-parciales..html"><a href="clasificación-de-las-ecuaciones-diferenciales-parciales..html#forma-canónica-de-las-ecuaciones-elípticas"><i class="fa fa-check"></i><b>1.3.4</b> Forma canónica de las ecuaciones elípticas</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="clasificación-de-las-ecuaciones-diferenciales-parciales..html"><a href="clasificación-de-las-ecuaciones-diferenciales-parciales..html#rectas-características"><i class="fa fa-check"></i><b>1.4</b> Rectas Características</a></li>
+<li class="chapter" data-level="1.5" data-path="clasificación-de-las-ecuaciones-diferenciales-parciales..html"><a href="clasificación-de-las-ecuaciones-diferenciales-parciales..html#función-vxy-uxy-elambda-x-mu-y"><i class="fa fa-check"></i><b>1.5</b> Función <span class="math inline">\(v(x,y) = u(x,y) e^{\lambda x + \mu y}\)</span></a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="ecuaciones-diferenciales-parciales-de-primer-orden.html"><a href="ecuaciones-diferenciales-parciales-de-primer-orden.html"><i class="fa fa-check"></i><b>2</b> Ecuaciones diferenciales parciales de primer orden</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="ecuaciones-diferenciales-parciales-de-primer-orden.html"><a href="ecuaciones-diferenciales-parciales-de-primer-orden.html#curvas-características."><i class="fa fa-check"></i><b>2.1</b> Curvas Características.</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="ecuaciones-diferenciales-parciales-de-primer-orden.html"><a href="ecuaciones-diferenciales-parciales-de-primer-orden.html#el-teorema-de-cauchy."><i class="fa fa-check"></i><b>2.1.1</b> El teorema de Cauchy.</a></li>
+<li class="chapter" data-level="2.1.2" data-path="ecuaciones-diferenciales-parciales-de-primer-orden.html"><a href="ecuaciones-diferenciales-parciales-de-primer-orden.html#edp-lineales-de-primer-orden-en-dos-dimensiones."><i class="fa fa-check"></i><b>2.1.2</b> EDP lineales de primer orden en dos dimensiones.</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="ecuaciones-diferenciales-parciales-de-primer-orden.html"><a href="ecuaciones-diferenciales-parciales-de-primer-orden.html#ecuaciones-diferenciales-parciales-lineales-de-primer-orden-en-dimensión-n2"><i class="fa fa-check"></i><b>2.2</b> Ecuaciones diferenciales parciales lineales de primer orden en dimensión n&gt;2</a></li>
+<li class="chapter" data-level="2.3" data-path="ecuaciones-diferenciales-parciales-de-primer-orden.html"><a href="ecuaciones-diferenciales-parciales-de-primer-orden.html#ecuaciones-diferenciales-cuasilineales-de-primer-orden-en-dimensión-n-geq-2"><i class="fa fa-check"></i><b>2.3</b> Ecuaciones diferenciales cuasilineales de primer orden en dimensión n <span class="math inline">\(\geq\)</span> 2</a></li>
+<li class="chapter" data-level="2.4" data-path="ecuaciones-diferenciales-parciales-de-primer-orden.html"><a href="ecuaciones-diferenciales-parciales-de-primer-orden.html#ecuaciones-diferenciales-parciales-de-primer-orden-no-lineales"><i class="fa fa-check"></i><b>2.4</b> Ecuaciones diferenciales parciales de primer orden no lineales</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="ecuaciones-diferenciales-parciales-de-primer-orden.html"><a href="ecuaciones-diferenciales-parciales-de-primer-orden.html#ecuaciones-diferenciales-totales"><i class="fa fa-check"></i><b>2.4.1</b> Ecuaciones diferenciales totales</a></li>
+<li class="chapter" data-level="2.4.2" data-path="ecuaciones-diferenciales-parciales-de-primer-orden.html"><a href="ecuaciones-diferenciales-parciales-de-primer-orden.html#metodo-general-de-integracion-de-una-ecuacion-pfaff"><i class="fa fa-check"></i><b>2.4.2</b> Metodo general de integracion de una ecuacion Pfaff</a></li>
+<li class="chapter" data-level="2.4.3" data-path="ecuaciones-diferenciales-parciales-de-primer-orden.html"><a href="ecuaciones-diferenciales-parciales-de-primer-orden.html#el-método-de-lagrange---charpit"><i class="fa fa-check"></i><b>2.4.3</b> El método de Lagrange - Charpit</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="ecuaciones-diferenciales-de-segundo-orden.html"><a href="ecuaciones-diferenciales-de-segundo-orden.html"><i class="fa fa-check"></i><b>3</b> Ecuaciones diferenciales de segundo orden</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="ecuaciones-diferenciales-de-segundo-orden.html"><a href="ecuaciones-diferenciales-de-segundo-orden.html#ecuación-de-onda"><i class="fa fa-check"></i><b>3.1</b> Ecuación de onda</a></li>
+<li class="chapter" data-level="3.2" data-path="ecuaciones-diferenciales-de-segundo-orden.html"><a href="ecuaciones-diferenciales-de-segundo-orden.html#ecuación-de-calor"><i class="fa fa-check"></i><b>3.2</b> Ecuación de calor</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="ecuaciones-diferenciales-de-segundo-orden.html"><a href="ecuaciones-diferenciales-de-segundo-orden.html#primer-modelo"><i class="fa fa-check"></i><b>3.2.1</b> Primer modelo</a></li>
+<li class="chapter" data-level="3.2.2" data-path="ecuaciones-diferenciales-de-segundo-orden.html"><a href="ecuaciones-diferenciales-de-segundo-orden.html#segundo-modelo"><i class="fa fa-check"></i><b>3.2.2</b> Segundo modelo</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="ecuaciones-diferenciales-de-segundo-orden.html"><a href="ecuaciones-diferenciales-de-segundo-orden.html#preliminares"><i class="fa fa-check"></i><b>3.3</b> Preliminares</a></li>
+<li class="chapter" data-level="3.4" data-path="ecuaciones-diferenciales-de-segundo-orden.html"><a href="ecuaciones-diferenciales-de-segundo-orden.html#método-de-separación-de-variables."><i class="fa fa-check"></i><b>3.4</b> Método de Separación de Variables.</a>
+<ul>
+<li class="chapter" data-level="3.4.1" data-path="ecuaciones-diferenciales-de-segundo-orden.html"><a href="ecuaciones-diferenciales-de-segundo-orden.html#solución-de-la-ecuación-de-laplace-en-2-dimensiones-bigtriangledown2psixy0"><i class="fa fa-check"></i><b>3.4.1</b> Solución de la ecuación de Laplace en 2 dimensiones: <span class="math inline">\(\bigtriangledown^2\Psi(x,y)=0\)</span></a></li>
+<li class="chapter" data-level="3.4.2" data-path="ecuaciones-diferenciales-de-segundo-orden.html"><a href="ecuaciones-diferenciales-de-segundo-orden.html#solución-de-la-ecuación-de-laplace-en-3-dimensiones-bigtriangledown2psixyz0"><i class="fa fa-check"></i><b>3.4.2</b> Solución de la ecuación de Laplace en 3 dimensiones: <span class="math inline">\(\bigtriangledown^2\Psi(x,y,z)=0\)</span></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="footnotes-and-citations.html"><a href="footnotes-and-citations.html"><i class="fa fa-check"></i><b>4</b> Footnotes and citations</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="footnotes-and-citations.html"><a href="footnotes-and-citations.html#citations"><i class="fa fa-check"></i><b>4.1</b> Citations</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="blocks.html"><a href="blocks.html"><i class="fa fa-check"></i><b>5</b> Blocks</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="blocks.html"><a href="blocks.html#equations"><i class="fa fa-check"></i><b>5.1</b> Equations</a></li>
+<li class="chapter" data-level="5.2" data-path="blocks.html"><a href="blocks.html#theorems-and-proofs"><i class="fa fa-check"></i><b>5.2</b> Theorems and proofs</a></li>
+<li class="chapter" data-level="5.3" data-path="blocks.html"><a href="blocks.html#callout-blocks"><i class="fa fa-check"></i><b>5.3</b> Callout blocks</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="sharing-your-book.html"><a href="sharing-your-book.html"><i class="fa fa-check"></i><b>6</b> Sharing your book</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="sharing-your-book.html"><a href="sharing-your-book.html#publishing"><i class="fa fa-check"></i><b>6.1</b> Publishing</a></li>
+<li class="chapter" data-level="6.2" data-path="sharing-your-book.html"><a href="sharing-your-book.html#pages"><i class="fa fa-check"></i><b>6.2</b> 404 pages</a></li>
+<li class="chapter" data-level="6.3" data-path="sharing-your-book.html"><a href="sharing-your-book.html#metadata-for-sharing"><i class="fa fa-check"></i><b>6.3</b> Metadata for sharing</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Ecuaciones diferenciales parciales</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="header">
+<h1 class="title">Ecuaciones diferenciales parciales</h1>
+<p class="author"><em>Alexis, Jesús y Eduardo</em></p>
+<p class="date"><em>2024-11-29</em></p>
+</div>
+<div id="clasificación-de-las-ecuaciones-diferenciales-parciales." class="section level1 hasAnchor" number="1">
+<h1><span class="header-section-number">Chapter 1</span> Clasificación de las ecuaciones diferenciales parciales.<a href="clasificación-de-las-ecuaciones-diferenciales-parciales..html#clasificación-de-las-ecuaciones-diferenciales-parciales." class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="ecuaciones-diferenciales-con-dos-variables-independientes." class="section level2 hasAnchor" number="1.1">
+<h2><span class="header-section-number">1.1</span> Ecuaciones diferenciales con dos variables independientes.<a href="clasificación-de-las-ecuaciones-diferenciales-parciales..html#ecuaciones-diferenciales-con-dos-variables-independientes." class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Se llama ecuación en derivadas parciales de segundo orden con variables independientes <span class="math inline">\(x,y\)</span> a la relación entre la función incógnita <span class="math inline">\(u(x,y)\)</span> y sus derivadas parciales hasta segundo orden.</p>
+<p><span class="math display">\[F(x, y, u, u_x, u_y, u_{xx},u_{yy},u_{xy}) = 0\]</span></p>
+<p>Análogamente se escribe la ecuación para un número mayor de variables independientes.</p>
+</div>
+<div id="ecuaciones-cuasi---lineales-lineales-y-no-lineales." class="section level2 hasAnchor" number="1.2">
+<h2><span class="header-section-number">1.2</span> Ecuaciones cuasi - lineales, lineales y no lineales.<a href="clasificación-de-las-ecuaciones-diferenciales-parciales..html#ecuaciones-cuasi---lineales-lineales-y-no-lineales." class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Análogamente se escribe la ecuación para un número mayor de variables independientes.
+La ecuación se llama lineal con respecto a las derivadas de orden mayor si ésta tiene la forma:</p>
+<p><span class="math display">\[a_{11}u_{xx}+2a_{12}u_{xy} + a_{22}u_{yy} + F_{1} (x, y, u, u_x, u_y) = 0\]</span></p>
+<p>donde <span class="math inline">\(a_{11}, a_{12}, a_{22}\)</span> son funciones de <span class="math inline">\((x,y)\)</span>, no de <span class="math inline">\(u\)</span>.</p>
+<p>Si los coeficientes <span class="math inline">\(a_{11}, a_{12}, a_{22}\)</span> no dependen solo de <span class="math inline">\((x,y)\)</span>, sino que son funciones de <span class="math inline">\(x, y, u, u_x, u_y\)</span>, entonces la ecuación se denomina cuasi - lineal.</p>
+<p>Ejemplo:</p>
+<p><span class="math display">\[uu_x, u_x u_{xx}, u_yu_x, u_yu_{yy}\]</span></p>
+<p>La ecuación se llama lineal, si es lineal tanto en las derivadas de orden mayor <span class="math inline">\(u_{xx}, u_{xy}, u_{yy}\)</span>, como en la función <span class="math inline">\(u\)</span> y en sus primeras derivadas <span class="math inline">\(u_x, u_y\)</span>:</p>
+<p><span class="math display">\[a_{11}u_{xx} + 2a_{12}u_{xy} + a_{22}u_{yy}+b_1u_x+b_2u_y+Cu+f = 0\]</span></p>
+<p>Siendo <span class="math inline">\(a_{11}, a_{12}, a_{22}, b_1, b_2, C, f\)</span> funciones sólo de <span class="math inline">\((x,y)\)</span></p>
+<p>Si los coeficientes de la ecuación anterior no dependen de <span class="math inline">\((x,y)\)</span>, se trata de una ecuación lineal con coeficientes constantes.</p>
+<p>La ecuación se llama homogénea, si <span class="math inline">\(f(x,y) = 0\)</span></p>
+<div id="forma-canónica-de-la-ecuación-de-onda." class="section level3 hasAnchor" number="1.2.1">
+<h3><span class="header-section-number">1.2.1</span> Forma Canónica de la ecuación de onda.<a href="clasificación-de-las-ecuaciones-diferenciales-parciales..html#forma-canónica-de-la-ecuación-de-onda." class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Consideremos la ecuación de onda:
+<span class="math inline">\(u_{xx}(x,t) - \frac{1}{V^2}u_{tt}(x,t) = 0\)</span></p>
+<p>donde V es la velocidad de la onda.
+Ahora consideremos la siguiente transformación de coordenadas (admisible).</p>
+<p><span class="math display">\[\xi = x-vt\]</span><br />
+<span class="math display">\[\eta = x+vt\]</span></p>
+<p><span class="math display">\[u_x(\xi, \eta) = \frac{\partial u(\xi,\eta)}{\partial x} = \frac{\partial u}{\partial \xi} \frac{\partial \xi}{\partial x} + \frac{\partial u}{\partial \eta} \frac{\partial \eta}{\partial x}\]</span></p>
+<p><br></p>
+<p><span class="math display">\[u_x = u_\xi + u_\eta\]</span></p>
+<p><br></p>
+<p><span class="math display">\[u_{xx}(\xi, \eta) = \frac{\partial^2u (\xi, \eta)}{\partial x^2} = \frac{\partial u_\xi}{\partial \xi}\frac{\partial \xi}{\partial x} + \frac{\partial u_\xi}{\partial \eta} \frac{\partial \eta}{\partial x} + \frac{\partial u_\eta}{\partial \xi} \frac{\partial \xi}{\partial x} + \frac{\partial u_\eta}{\partial \eta} \frac{\partial \eta}{\partial x}\]</span></p>
+<p><br></p>
+<p><span class="math display">\[u_{xx} = u_{\xi\xi} + u_{\xi\eta} + u_{\eta\xi} + u_{\eta\eta}\]</span></p>
+<p><br></p>
+<p><span class="math inline">\(u_t(\xi,\eta) = \frac{\partial u}{\partial \xi} \frac{\partial \xi}{\partial t} + \frac{\partial u}{\partial \eta}\frac{\partial \eta }{\partial t}\)</span></p>
+<p><br></p>
+<p><span class="math inline">\(u_t = V \frac{\partial u}{\partial \eta} - V\frac{\partial u}{\partial \xi}\)</span></p>
+<p><bt></p>
+<p><span class="math display">\[u_{tt}(\xi,\eta) = \frac{\partial^2u (\xi, \eta)}{\partial t^2} = V [\frac{\partial u_\eta}{\partial \xi}\frac{\partial \xi}{\partial t} + \frac{\partial u_\eta}{\partial \eta}\frac{\partial \eta}{\partial t}] - V[\frac{\partial u_\xi}{\partial \xi}\frac{\partial \xi}{\partial t} + \frac{\partial u_\xi}{\partial \eta}\frac{\partial \eta}{\partial t}]\]</span></p>
+<p><br></p>
+<p><span class="math display">\[=  V[u_{\eta\xi}(-V) +  u_{\eta\eta}(V)] - V[u_{\xi\xi}(-V) + u_{\xi\eta}(V)]\]</span></p>
+<p><br></p>
+<p><span class="math display">\[u_{tt}= -V^2 U_{\xi\xi} + V^2 u_{\eta\eta} - 2V^2u_{\eta\xi}\]</span></p>
+<p><br></p>
+<p><span class="math display">\[u_{xt}(\xi,\eta) = \frac{\partial u_x}{\partial t} = (\frac{\partial u_\xi}{\partial \xi}\frac{\partial \xi}{\partial t} + \frac{\partial u_\xi}{\partial u_\eta}\frac{\partial u_\eta}{\partial t}) + (\frac{\partial u_\eta}{\partial \xi}\frac{\partial \xi}{\partial t} + \frac{\partial u_\eta}{\partial \eta}\frac{\partial \eta}{\partial t})\]</span></p>
+<p><br></p>
+<p><span class="math display">\[u_{xt} = -Vu_{\xi\xi} + Vu_{\xi\eta} - Vu_{\eta\xi} + Vu_{\eta\eta}\]</span></p>
+<p><br></p>
+<p>Sustituimos <span class="math inline">\(u_{xx}\)</span>, <span class="math inline">\(u_{tt}\)</span> en la ecuación de onda y obtenemos:</p>
+<p><br></p>
+<p><span class="math display">\[u_{\xi\xi} + u_{\xi\eta} + u_{\eta\eta} - (u_{\eta\eta} - 2u_{\eta\xi} + u_{\xi\xi}) = 0\]</span></p>
+<p><br></p>
+<p>Así, la forma canónica de la ecuación de onda es:</p>
+<p><br></p>
+<p><span class="math display">\[u_{\xi\eta} = 0\]</span></p>
+<p><br></p>
+<p>Si integramos esta última ecuación respecto de <span class="math inline">\(\eta\)</span> se tiene:</p>
+<p><span class="math display">\[u_\xi = f(\xi)\]</span></p>
+<p><br></p>
+<p>Ahora integramos respecto de <span class="math inline">\(\xi\)</span></p>
+<p><span class="math display">\[u = \int f(\xi) d\xi + g(\eta)\]</span></p>
+<p>Regresando a la forma canónica de la ecuación de onda pero ahora integramos primero respecto de <span class="math inline">\(\xi\)</span>.</p>
+<p><span class="math display">\[u_\eta = h(\eta)\]</span></p>
+<p>Luego integramos respecto a <span class="math inline">\(\eta\)</span></p>
+<p><span class="math display">\[u = \int h(\eta) d\eta + k(\xi)\]</span></p>
+<p><br></p>
+<p>Entonces:</p>
+<p><span class="math display">\[k(\xi) = \int f(\xi) d\xi\]</span></p>
+<p><br></p>
+<p><span class="math display">\[g(\eta) = \int h(\eta) d\eta\]</span></p>
+<p><br></p>
+<p>Por lo tanto:</p>
+<p><span class="math display">\[u(\xi, \eta) = \int f(\xi) d\xi + \int h(\eta) d\eta\]</span></p>
+</div>
+</div>
+<div id="clasificacion-de-las-ecuaciones-diferenciales-parciales-de-segundo-orden." class="section level2 hasAnchor" number="1.3">
+<h2><span class="header-section-number">1.3</span> Clasificacion de las ecuaciones diferenciales parciales de segundo orden.<a href="clasificación-de-las-ecuaciones-diferenciales-parciales..html#clasificacion-de-las-ecuaciones-diferenciales-parciales-de-segundo-orden." class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="forma-canónica" class="section level3 hasAnchor" number="1.3.1">
+<h3><span class="header-section-number">1.3.1</span> Forma canónica<a href="clasificación-de-las-ecuaciones-diferenciales-parciales..html#forma-canónica" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Consideremos a la forma canónica de las ecuaciones diferenciales parciales de segundo orden como la expresión más simple obtenida mediente una transformación de variables.
+Partimos de la expresión general de la ecuación diferencial de segundo orden:</p>
+<p><span class="math display">\[a_{11} u_{xx} + 2a_{12} u_{xy} + a_{22} u_{yy} + bu_x + cu_y + u = 0\]</span></p>
+<p>con <span class="math inline">\(a_{11}, a_{12}, a_{22}, b, c\)</span> no necesariamente constantes.</p>
+<p>Si se usa una trasformacion admisible de coordenadas: <span class="math inline">\(\xi= \xi(x,y),  \eta=\eta(x,y)\)</span> entonces las derivadas parciales en las nuevas varibles son:</p>
+<p><span class="math display">\[u_x=u_\xi \xi_x +u_\eta \eta_x\]</span></p>
+<p><span class="math display">\[u_{xx}= (u_{\xi\xi} \xi_x + u_{\xi\eta}\eta_x)\xi_x + u_\xi \xi_{xx} + (u_{\eta\xi} \xi_x + u_{\eta\eta}\eta_x)\eta_x + u_\eta \eta_{xx}\]</span></p>
+<p><span class="math display">\[=u_{\xi\xi}\xi_x^{2}+ 2u_{\eta\xi}\xi_x\eta_x+u_{\eta\eta}\eta_x^{2}+u_\xi\xi_{xx}+u_\eta\eta_{xx}\]</span></p>
+<p><span class="math display">\[u_y=u_\xi \xi_y+u_\eta\eta_y\]</span></p>
+<p><span class="math display">\[u_{yy}= (u_{\xi\xi} \xi_y + u_{\xi\eta}\eta_y)\xi_y + u_\xi \xi_{yy} + (u_{\eta\xi} \xi_y + u_{\eta\eta}\eta_y)\eta_y + u_\eta \eta_{yy}\]</span></p>
+<p><span class="math display">\[=u_{\xi\xi}\xi_y^{2}+ 2u_{\eta\xi}\xi_y\eta_y+u_{\eta\eta}\eta_x^{2}+u_\xi\xi_{yy}+u_\eta\eta_{yy}\]</span></p>
+<p><span class="math display">\[u_{xy}= \frac{\partial(u_\xi\xi_x +u_\eta \eta_x)}{\partial y} = (u_{\xi\xi}\xi_y + u_{\xi\eta} \eta_y) \xi_x + u_\xi \xi_{xy} + (u_{\eta\xi}\xi_y + u_{\eta\eta} \eta_y)\eta_x + u_\eta \eta_{xy}\]</span></p>
+<p><span class="math display">\[=u_{\xi\xi}\xi_y \xi_x + u_{\xi\eta} (\eta_y \xi_x + \eta_x \xi_y) + u_\xi \xi_{xy} + u_{\eta\eta}\eta_y\eta_x + u_\eta \eta_{xy}\]</span></p>
+<p>Al sustituir en la ecuación original, tenemos:</p>
+<p><span class="math inline">\(a_{11} (u_{\xi\xi}\xi_x^{2}+ 2u_{\eta\xi}\xi_x\eta_x+u_{\eta\eta}\eta_x^{2}+u_\xi\xi_{xx}+u_\eta\eta_{xx}) + 2a_{12} [u_{\xi\xi}\xi_y \xi_x + u_{\xi\eta} (\eta_y \xi_x + \eta_x \xi_y) + u_\xi \xi_{xy} + u_{\eta\eta}\eta_y\eta_x + u_\eta \eta_{xy}]+ a_{22} (u_{\xi\xi}\xi_y^{2}+ 2u_{\eta\xi}\xi_y\eta_y+u_{\eta\eta}\eta_x^{2}+u_\xi\xi_{yy}+u_\eta\eta_{yy}) + b(u_\xi\xi_x +u_\eta \eta_x) + c(u_\xi \xi_y+u_\eta\eta_y) + u = 0\)</span></p>
+<p>Después de ordenar los términos se tiene. Sea:</p>
+<p><span class="math inline">\(\bar{a_{11}}:= a_{11}\xi_x^{2} + 2a_{12} \xi_x\xi_y+a_{22}\xi_y^{2}\)</span></p>
+<p><span class="math inline">\(\bar{a_{12}}:= a_{11}\xi_x \eta_x + a_{12}(\xi_x\eta_y+ \eta_x \xi_y)+ a_{22}\xi_y\eta_y\)</span></p>
+<p><span class="math inline">\(\bar{a_{11}}:= a_{11}\eta_x^{2} + 2a_{12} \eta_x\eta_y+a_{22}\eta_y^{2}\)</span></p>
+<p>asi, obtenemos:</p>
+<p><span class="math display">\[\bar{a_{11}}u_{\xi\xi}+ 2\bar{a_{12}}u_{\xi\eta}+\bar{a_{22}}u_{\eta\eta}+ \bar{F}=0. \]</span></p>
+<p>En donde <span class="math inline">\(\bar{F}\)</span> no depende de las segundas derivadas.</p>
+<p>Ahora, escogemos las variables <span class="math inline">\(\xi\)</span> y <span class="math inline">\(\eta\)</span> de modo que el coeficiente <span class="math inline">\(\bar{a_{11}}\)</span> sea nulo, es decir:</p>
+<p><span class="math display">\[a_{11}\xi_x^{2} + 2a_{12} \xi_x\xi_y+a_{22}\xi_y^{2} = 0,\]</span></p>
+<p>en otras palabras, se elige de tal forma que sea solución a la ecuacion diferencial parcial anterior.</p>
+<p>Para encontrar <span class="math inline">\(\xi(x,y)\)</span> es necesario demostrar algunos lemas:</p>
+<p>Lema #1: si <span class="math inline">\(z=\varphi(x,y)\)</span> es una solución particular de la ecuación:</p>
+<p><span class="math display" id="eq:lemau">\[\begin{equation}
+  a_{11}z_x^{2} + 2a_{12} z_x z_y+a_{22}z_y^{2} = 0
+  \tag{1.1}
+\end{equation}\]</span></p>
+<p>la relación <span class="math inline">\(\varphi(x,y)=0\)</span> es una integral general de la ecuación diferencial ordinaria:
+<span class="math display">\[a_{11} (dy)^{2} + 2a_{12} dx dy+a_{22}(dx)^{2} = 0\]</span></p>
+<p>Demostración.
+Como <span class="math inline">\(z=\varphi\)</span> entonces <span class="math inline">\(z_x=\varphi_x, z_y=\varphi_y\)</span>. Por lo cual <a href="clasificación-de-las-ecuaciones-diferenciales-parciales..html#eq:lemau">(1.1)</a> se escribe como:</p>
+<p><span class="math display" id="eq:lemaun">\[\begin{equation}
+  a_{11}\varphi_x^{2} + 2a_{12} \varphi_x \varphi_y+a_{22}\varphi_y^{2} = 0
+  \tag{1.2}
+\end{equation}\]</span></p>
+<p>Dividimos por <span class="math inline">\(\varphi_y^{2}\)</span>:</p>
+<p><span class="math display" id="eq:lemauno">\[\begin{equation}
+  a_{11}(\frac{\varphi_x}{\varphi_y})^{2} + 2a_{12} (\frac{\varphi_x}{\varphi_y})+a_{22}= 0
+  \tag{1.3}
+\end{equation}\]</span></p>
+<p>Si además consideramos <span class="math inline">\(\varphi(x,y)= cte\)</span>, es decir <span class="math inline">\(d\varphi(x,y)= 0\)</span> , <span class="math inline">\(\varphi_x dx + \varphi_y dy =0, entonces:\)</span></p>
+<p><span class="math display">\[\frac{\varphi_x}{\varphi_y}=-\frac{dy}{dx}\]</span></p>
+<p>Sustituyendo en <a href="clasificación-de-las-ecuaciones-diferenciales-parciales..html#eq:lemauno">(1.3)</a>:</p>
+<p><span class="math display">\[a_{11}(-\frac{dy}{dx})^{2} + 2a_{12} (-\frac{dy}{dx})+a_{22}= 0\]</span></p>
+<p><span class="math display">\[a_{11}(dy)^{2} - 2a_{12} dy dx+a_{22}(dx)^{2}= 0\]</span></p>
+<p>Como <span class="math inline">\(\varphi(x,y)= cte\)</span> entonces satisface la ecuación diferencial parcial <a href="clasificación-de-las-ecuaciones-diferenciales-parciales..html#eq:lemaun">(1.2)</a>.</p>
+</div>
+<div id="forma-canónica-de-las-ecuaciones-hiperbólicas" class="section level3 hasAnchor" number="1.3.2">
+<h3><span class="header-section-number">1.3.2</span> Forma canónica de las ecuaciones hiperbólicas<a href="clasificación-de-las-ecuaciones-diferenciales-parciales..html#forma-canónica-de-las-ecuaciones-hiperbólicas" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Partimos del siguinete lema :</p>
+<p><strong>Lema #2:</strong> Si <span class="math inline">\(\varphi(x,y) = C\)</span> es una integral general de la ecuación
+diferencial ordinaria</p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math display">\[a_{11}dy^2 - 2a_{12}dxdy + a_{22}dx^2 = 0\]</span></li>
+</ol>
+<p>entonces la función <span class="math inline">\(z = \varphi(x,y)\)</span> satisface la ecuación</p>
+<ol start="2" style="list-style-type: lower-alpha">
+<li><span class="math display">\[a_{11} z_y^2 + 2a_{12} z_x z_y + a_{22} z_x^2 = 0\]</span></li>
+</ol>
+<p><strong>Demostración:</strong> Consideremos una curva integral de (a) que pasa por el
+punto arbitrario <span class="math inline">\((x_0, y_0)\)</span>, además <span class="math inline">\(\varphi(x,y) = C_0\)</span> y <span class="math inline">\(y_0= f(x,C_0)\)</span>.</p>
+<p><strong>Observación:</strong> <span class="math inline">\(y_0 = f(x_0, C_0)\)</span> <span class="math inline">\(\rightarrow\)</span> Crea una restricción.</p>
+<p>Para todos los puntos en la curva, pediremos que se cumpla la siguiente
+relación:</p>
+<p><span class="math display">\[a_{11} \left( \frac{dy}{dx} \right)^2 - 2a_{12} \left( \frac{dy}{dx} \right) + a_{22} = a_{11} \left( -\frac{\varphi_x}{\varphi_y} \right)^2 - 2a_{12} \left( -\frac{\varphi_x}{\varphi_y} \right) + a_{22}\]</span></p>
+<p>es decir,</p>
+<p><span class="math display">\[a_{11} \left( \frac{\varphi_x}{\varphi_y} \right)^2 + 2a_{12} \frac{\varphi_x}{\varphi_y} + a_{22} = 0.\]</span></p>
+<p>Observación: A una ecuación D.P. le corresponde una ED Característica EDP → ED.</p>
+<p>Haciendo <span class="math inline">\(x = x_0\)</span> en la última relación se tiene:</p>
+<p><span class="math display">\[
+a_{11} \varphi^2_x(x_0, y_0) + 2 a_{12} \varphi_x(x_0, y_0) \varphi_y(x_0, y_0) + a_{22} \varphi^2_y(x_0, y_0) = 0
+\]</span></p>
+<p><span class="math display">\[
+a_{11} z^2_x(x_0, y_0) + 2 a_{12} z_x(x_0, y_0) z_y(x_0, y_0) + a_{22} z^2_y(x_0, y_0) = 0
+\]</span></p>
+<p>La ecuación <span class="math inline">\(a_{11} dy^2 - 2 a_{12} dx \, dy + a_{22} dx^2 = 0\)</span> se llama ecuación característica para la ecuación:</p>
+<p><span class="math display">\[
+a_{11} u_{xx} + 2 a_{12} u_{xy} + a_{22} u_{yy} + F_1(x, y, u, u_x, u_y) = 0
+\]</span></p>
+<p>y sus integrales características.</p>
+<p>Haciendo <span class="math inline">\(\xi = \varphi(x, y)\)</span> con <span class="math inline">\(\varphi(x, y)= \text{cte}\)</span> es una integral de la ecuación (a), el coeficiente de <span class="math inline">\(u_{\xi\xi}\)</span> se reduce a 0:</p>
+<p><span class="math display">\[
+\bar{a}_{11}= 0
+\]</span></p>
+<p>Si <span class="math inline">\(\eta = \Psi(x, y)\)</span> con <span class="math inline">\(\Psi(x, y) = \text{cte}\)</span> (diferente) se tiene otra integral general de la ecuación (a) independiente de <span class="math inline">\(\varphi(x, y)\)</span>, de forma que se anulara también el coeficiente de <span class="math inline">\(u_{\eta\eta}\)</span> :</p>
+<p><span class="math display">\[
+\bar{a}_{22} = 0
+\]</span></p>
+<p>Las ecuaciones anteriores nos permiten encontrar dos expresiones de <span class="math inline">\(\frac{dy}{dx}\)</span>:</p>
+<p><span class="math display">\[
+\frac{dy}{dx} = \frac{a_{12} + \sqrt{a_{12}^2 - a_{11} a_{22}}}{a_{11}}
+\]</span></p>
+<p><span class="math display">\[
+\frac{dy}{dx} = \frac{a_{12} - \sqrt{a_{12}^2 - a_{11} a_{22}}}{a_{11}}
+\]</span></p>
+<p>Sea <span class="math inline">\(D = a_{12}^2 - a_{11} a_{22}\)</span>. El signo de D determina el tipo de
+ecuación: <span class="math display">\[a_{11} u_{xx} + 2 a_{12} u_{xy} + a_{22} u_{yy}  = 0\]</span><br />
+La ecuación se llamará en el punto P en el que se evalúa D, como:</p>
+<ul>
+<li><p>Hiperbólica, si en el punto P se tiene <span class="math inline">\(D &gt; 0\)</span>.</p></li>
+<li><p>Elíptica, si en el punto P se tiene <span class="math inline">\(D &lt; 0\)</span>.</p></li>
+<li><p>Parabólica, si en el punto P se tiene <span class="math inline">\(D = 0\)</span>.</p></li>
+</ul>
+<p><strong>Observaciones:</strong></p>
+<p><span class="math display">\[ \bar{a}_{12}^2 - \bar{a}_{11}\bar{a}_{22} = (a_{12}^2-a_{11}a_{22})(\xi_x \eta_y- \eta_x \xi_y)^2\]</span></p>
+<p><span class="math display">\[\begin{pmatrix}
+    \xi_{x} &amp; \xi_{y} \\
+    \eta_{x} &amp; \eta_{y}
+\end{pmatrix}=
+\begin{pmatrix}
+    \frac{\partial \xi}{\partial x} &amp; \frac{\partial \xi}{\partial y}\\
+    \frac{\partial \eta}{\partial x} &amp; \frac{\partial \eta}{\partial y}
+\end{pmatrix}\]</span></p>
+<p><em>Es el jacobiano de la transformación de variables y tiene que ser
+diferente de cero.</em></p>
+<p>Consideremos una región <span class="math inline">\(\Omega\)</span> de todos los puntos en la cual la
+ecuación es del mismo tipo. Para cada punto en <span class="math inline">\(\Omega\)</span> pasan dos
+características.<br />
+</p>
+<p><strong>Observación:</strong> La cantidad <span class="math inline">\(\xi_y\)</span> <span class="math inline">\(\eta_x\)</span> - <span class="math inline">\(\xi_x\)</span> <span class="math inline">\(\eta_y\)</span> es el
+jacobiano de la transformación de variables y tiene que ser diferente de
+cero.</p>
+<p>Sus integrales generales <span class="math inline">\(\varphi(x,y) = \text{cte}\)</span> y <span class="math inline">\(\Psi(x,y) = \text{cte}\)</span> son constantes diferentes y determinan una familia de características. Se tiene:</p>
+<p><span class="math display">\[u_{\xi \eta} = \Phi \left( \xi, \eta, u, u_{\xi}, u_{\eta} \right)\]</span></p>
+<p>con</p>
+<p><span class="math display">\[\Phi = \frac{-F}{2a_{12}} \rightarrow \text{Forma canónica de  las  ecuaciones tipo hiperbólicas}\]</span></p>
+<p><br />
+</p>
+<p>Por otro lado, existe una segunda forma canónica. Se hace
+<span class="math inline">\(\xi = \alpha + \beta \text{ , } \eta = \alpha -\beta\)</span>, entonces:
+<span class="math display">\[\alpha = \frac{\xi+ \eta}{2} \text{ , } \beta = \frac{\xi - \eta}{2}\]</span></p>
+<p>Usamos <span class="math inline">\(2 \bar{a}_{12} u_{\eta\xi}= -\bar{F}\)</span>, donde:
+<span class="math display">\[\bar{a}_{12} = a_{11} \xi_x \eta_x + a_{12}(\xi_x\eta_y + \eta_x \xi_y ) + a_{22} \xi_y \eta_y \]</span></p>
+<p>Ahora se obtendran las derivadas parciales:</p>
+<p><span class="math display">\[\xi_x = \frac{\partial\xi}{\partial x}= \frac{\partial}{\partial x}(\alpha +\beta) = \alpha_x + \beta_x\]</span></p>
+<p><span class="math display">\[\eta_x = \frac{\partial \eta}{\partial x} = \frac{\partial}{\partial x} (\alpha -\beta) =\alpha_x - \beta_x\]</span></p>
+<p><span class="math display">\[\xi_y =\alpha_y + \beta_y \]</span></p>
+<p><span class="math display">\[\eta_y = \alpha_y -\beta_y\]</span></p>
+<p>Por lo que:</p>
+<p><span class="math display">\[\bar{a}_{12} = a_{11}(\alpha_x +\beta_x)(\alpha_x - \beta_x)+ a_{12}[(\alpha_x+ \beta_x)(\alpha_y-\beta_y)+(\alpha_x - \beta_x)(\alpha_y +\beta_y)]+ a_{22} (\alpha_y +\beta_y)(\alpha_y - \beta_y)\]</span></p>
+<p><span class="math display">\[=a_{11} (\alpha_x^2- \beta_x^2)+ a_{12} [\alpha_x \alpha_y - \alpha_x \beta_y+ \beta_x \alpha_y-\beta_x\beta_y+ \alpha_x\alpha_y+\alpha_x\beta_y-\beta_x\alpha_y-\beta_x\beta_y]+a_{22}(\alpha_y^2 - \beta_y^2)\]</span></p>
+<p><span class="math display">\[\bar{a}_{12} = a_{11}(\alpha_x^2 - \beta_x^2) + 2 a_{12} (\alpha_x\alpha_y-\beta_x\beta_y)+ a_{22} (\alpha_y^2-\beta_y^2)\]</span></p>
+<p>Además debemos encontrar <span class="math inline">\(u_{\eta\xi}\)</span> :</p>
+<p><span class="math display">\[u_\eta = u_\alpha \alpha_\eta + u_\beta \beta_\eta\]</span></p>
+<p><span class="math display">\[u_\eta = \frac{1}{2} (u_\alpha - u_\beta)\]</span></p>
+<p><span class="math display">\[ u_{\eta\xi} = \frac {1}{2} \Bigl(\frac {\partial u_\alpha }{\partial \xi}- \frac {\partial u_\beta }{\partial \xi}\Bigr)\]</span></p>
+<p><span class="math display">\[u_{\eta\xi} = \frac{1}{2}\Biggl[\Bigl(\frac{\partial u_\alpha}{\partial \alpha}\cdot \frac{\partial \alpha}{\partial \xi} +\frac{\partial u_\alpha}{\partial \beta}\cdot \frac{\partial \beta}{\partial\xi}\Bigr) - \Bigl(\frac{\partial u_\beta }{\partial\alpha} \cdot \frac{\partial \alpha }{\partial \xi}+ \frac{\partial u_\beta}{\partial \beta} \cdot \frac{\partial \beta}{\partial \xi}\Bigr)\Biggr]\]</span></p>
+<p><span class="math display">\[=\frac{1}{2} \Bigl[\frac{1}{2}u_{\alpha\alpha} + \frac{1}{2}u_{\alpha \beta} - \frac{1}{2} u_{\beta \alpha}- \frac{1}{2}u_{\beta\beta}\Bigr]\]</span></p>
+<p><span class="math display">\[= \frac{1}{4} (u_{\alpha\alpha}- u_{\beta\beta})\]</span></p>
+<p>Entonces:</p>
+<p><span class="math display">\[2 \bar{a}_{12}u_{\eta \xi} =2 \bar{a}_{12} \frac{1}{4} \Bigl(u_{\alpha}-u_{\beta\beta} \Bigr) = - \bar{F}\]</span></p>
+<p><span class="math display">\[\therefore u_{\alpha \alpha}- u_{\beta\beta} = \frac {-2\bar{F}}{a_{12}} \rightarrow \text{Forma canónica 2}\]</span><br />
+</p>
+</div>
+<div id="forma-canónica-de-las-ecuaciones-parabólicas" class="section level3 hasAnchor" number="1.3.3">
+<h3><span class="header-section-number">1.3.3</span> Forma canónica de las ecuaciones parabólicas<a href="clasificación-de-las-ecuaciones-diferenciales-parciales..html#forma-canónica-de-las-ecuaciones-parabólicas" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Para este tipo de ecuaciones se tiene <span class="math inline">\(D=0\)</span>, es decir:
+<span class="math display">\[a_{12}^2 - a_{11} a_{22}=0\]</span></p>
+<p>entonces <span class="math inline">\(a_{12} = \sqrt{a_{11}} \sqrt{a_{22}}\)</span> , además de la integral de la ecuación diferencial ordinaria <span class="math inline">\(\xi = \varphi(x,y) \text{, } \eta = \Psi (x,y) \rightarrow \text{se obtendra del jacobiano.}\)</span></p>
+<p>Observación:
+<span class="math display">\[\bar{a_{11}} = a_{11} \xi_x^2+ 2a_{12} \xi_x\xi_y + a_{22} \xi_y^2\]</span></p>
+<p><span class="math display">\[= a_{11} \xi_x^2+ 2a_{12}\sqrt{a_{11}} \sqrt{a_{22}} \xi_x\xi_y + a_{22} \xi_y^2\]</span></p>
+<p><span class="math display">\[=(\sqrt{a_{11}}\xi_x + \sqrt{a_{22}}\xi_y)^2\]</span></p>
+<p>Esta cantidad debe de ser cero, ya que así lo hemos impuesto.</p>
+<p>Observación:</p>
+<p><span class="math display">\[\bar{a}_{12}= a_{11} \xi_x \eta_x + a_{12} (\xi_x \eta_y + \xi_y \eta_x)+a_{22} \xi_y \eta_x\]</span></p>
+<p><span class="math display">\[\bar{a}_{12}= a_{11} \xi_x \eta_x +  \sqrt{a_{11}} \sqrt{a_{22}} (\xi_x \eta_y + \xi_y \eta_x)+a_{22} \xi_y \eta_x\]</span></p>
+<p><span class="math display">\[= \sqrt{a_{11}}\xi_x (\sqrt{a_{11} }\eta_x + \sqrt{a_{22}}\eta_y)+ \sqrt{a_{22}}\xi_y (\sqrt{a_{11} }\eta_x + \sqrt{a_{22}}\eta_y)\]</span></p>
+<p><span class="math display">\[(\sqrt{a_{11}}\xi_x +\sqrt{a_{22}}\xi_y)(\sqrt{a_{11} }\eta_x + \sqrt{a_{22}}\eta_y)=0\]</span></p>
+<p>Entonces <span class="math inline">\(\bar{a}_{22} u_{\eta\eta} + \bar{F} =0\)</span> con <span class="math inline">\(\bar{a}_{22} \neq 0\)</span>.</p>
+<p><span class="math display">\[\therefore u_{\eta\eta} = - \frac{\bar{F}}{\bar{a}_{22}} \text{Forma canónica de las ecuaciones tipo parabólicas.}\]</span></p>
+</div>
+<div id="forma-canónica-de-las-ecuaciones-elípticas" class="section level3 hasAnchor" number="1.3.4">
+<h3><span class="header-section-number">1.3.4</span> Forma canónica de las ecuaciones elípticas<a href="clasificación-de-las-ecuaciones-diferenciales-parciales..html#forma-canónica-de-las-ecuaciones-elípticas" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Para este tipo de ecuaciones se tiene una forma compleja de <span class="math inline">\(\frac{dy}{dx}\)</span>. Sea <span class="math inline">\(\varphi(x,y)=cte\)</span> una integral compleja de:</p>
+<p><span class="math display">\[\frac{dy}{dx} = \frac{a_{12}+\sqrt{a_{12}^{2}-a_{11}a_{22}}}{a_{11}}\]</span></p>
+<p>Entonces <span class="math inline">\(\varphi^{*}(x,y)\)</span> (la compleja conjugada de <span class="math inline">\(\varphi(x,y)\)</span>), sera la integral comppleja de:</p>
+<p><span class="math display">\[\frac{dy}{dx} = \frac{a_{12}-\sqrt{a_{12}^{2}-a_{11}a_{22}}}{a_{11}}\]</span></p>
+<p>Sea <span class="math inline">\(\xi=\varphi(x,y)\)</span> y <span class="math inline">\(\eta=\varphi^{*}(x,y)\)</span></p>
+<p>Ahora bien, en las ecuaciones tipo elípticas se introducen las variables:
+<span class="math display">\[\alpha= \frac{\varphi+\varphi^{*}}{2}\]</span></p>
+<p><span class="math display">\[\beta=\frac{\varphi-\varphi^{*}}{2i}\]</span></p>
+<p>entonces:</p>
+<p><span class="math display">\[\xi=\alpha + i\beta\]</span></p>
+<p><span class="math display">\[\eta= \alpha-i\beta\]</span></p>
+<p>Además de cambiar la forma canónica de la ecuación tipo elíptica, nos evitaremos trabajar con cantidades complejas.</p>
+<p>Como antes, se exige que <span class="math inline">\(\bar{a_{11}}=0\)</span></p>
+<p><span class="math display">\[\bar{a}_{11}=a_{11}\xi_x^{2}+2a_{12}\xi_x\xi_y+a_{22}\xi_y^{2}\]</span></p>
+<p><span class="math display">\[=a_{11}(\alpha_x+ i\beta_x)^{2} +2a_{12}(\alpha_x+ i\beta_x)(\alpha_y+ i\beta_y)+a_{22}(\alpha_y+ i\beta_y)^{2}\]</span></p>
+<p><span class="math display">\[=a_{11}\alpha_x^{2}+2a_{11}\alpha_x i\beta_x-a_{11}\beta_x^{2}+2a_{12}(\alpha_x \alpha_y + \alpha_x i \beta_y+ i \beta_x \alpha_y + i^{2} \beta_y \beta_x)+a_{22}\alpha_y^{2}+ 2a_{22}\alpha_y i \beta_y - a_{22}\beta_y^2\]</span></p>
+<p><span class="math display">\[=(a_{11} \alpha_x^2+ 2a_{12}\alpha_x \alpha_y + a_{22} \alpha_y^2) - (a_{11} \beta_x^2+ 2a_{12}\beta_x \beta_y + a_{22} \beta_y^2)+ 2i\Bigr[a_{11}\alpha_x \beta_x + a_{12} (\alpha_x \beta_y+ \beta_x \alpha_y)+ a_{22}\alpha_y\beta_y \Bigl]\]</span></p>
+<p>Por otro lado,
+<span class="math display">\[\bar{a}_{22}=a_{11}\eta_x^{2}+2a_{12}\eta_x\eta_y+a_{22}\eta_y^{2}\]</span></p>
+<p><span class="math display">\[=a_{11}(\alpha_x- i\beta_x)^{2} +2a_{12}(\alpha_x- i\beta_x)(\alpha_y- i\beta_y)+a_{22}(\alpha_y- i\beta_y)^{2}\]</span></p>
+<p><span class="math display">\[=(a_{11} \alpha_x^2+ 2a_{12}\alpha_x \alpha_y + a_{22} \alpha_y^2) - (a_{11} \beta_x^2+ 2a_{12}\beta_x \beta_y + a_{22} \beta_y^2)- 2i\Bigr[a_{11}\alpha_x \beta_x + a_{12} (\alpha_x \beta_y+ \beta_x \alpha_y)+ a_{22}\alpha_y\beta_y \Bigl]\]</span></p>
+<p>Como <span class="math inline">\(\bar{a}_{11}=0\)</span> entonces:</p>
+<p><span class="math display">\[a_{11} \alpha_x^2+ 2a_{12}\alpha_x \alpha_y + a_{22} \alpha_y^2 = a_{11} \beta_x^2+ 2a_{12}\beta_x \beta_y + a_{22} \beta_y^2\]</span></p>
+<p>Además</p>
+<p><span class="math display">\[a_{11}\alpha_x \beta_x + a_{12} (\alpha_x \beta_y+ \beta_x \alpha_y)+ a_{22}\alpha_y\beta_y=0\]</span></p>
+<p>Con este resultado se tiene que <span class="math inline">\(\bar{a}_{11} = \bar{a}_{22}=0\)</span>. Por lo cual, la forma general de las ecuaciones diferenciales parciales de segundo orden se reduce a:</p>
+<p><span class="math display">\[2 \bar{a}_{12}u_{\xi\eta}+\bar{F}=0\]</span></p>
+<p><span class="math display">\[\therefore u_{\xi\eta}= -\frac{\bar{F}}{2\bar{a}_{12}}\rightarrow \text{Forma canónica de las ecuaciones elípticas}\]</span></p>
+<p>Existe una segunda forma canónica. Se hace
+<span class="math inline">\(\xi = \alpha + i\beta \text{ , } \eta = \alpha - i\beta\)</span>, entonces:
+<span class="math display">\[\alpha = \frac{\xi+ \eta}{2} \text{ , } \beta = \frac{\eta - \xi}{2} i\]</span></p>
+<p>Usamos <span class="math inline">\(2 \bar{a}_{12}u_{\xi\eta}+\bar{F}=0\)</span>, donde:
+<span class="math display">\[\bar{a}_{12} = a_{11} \xi_x \eta_x + a_{12}(\xi_x\eta_y + \eta_x \xi_y ) + a_{22} \xi_y \eta_y \]</span></p>
+<p>Ahora se obtendran las derivadas parciales:</p>
+<p><span class="math display">\[u_\xi = u_\alpha \alpha_\xi + u_\beta \beta_\xi\]</span></p>
+<p><span class="math display">\[= \frac{1}{2}u_\alpha - \frac{1}{2} i u_\beta = \frac{1}{2}\Bigr[u_\alpha - i u_\beta \Bigr]\]</span></p>
+<p>por lo que,</p>
+<p><span class="math display">\[u_{\xi \eta}= \frac{1}{2}\Bigr[u_{\alpha\alpha} \alpha_\eta+ u_{\alpha \beta} \beta_\eta- i (u_{\beta\alpha}\alpha_\eta+ u_{\beta \beta} \beta_\eta) \Bigr]\]</span></p>
+<p><span class="math display">\[= \frac{1}{2}\Bigr[\frac{1}{2} u_{\alpha\alpha} + \frac{i}{2}u_{\alpha \beta} - i \Bigl(\frac{1}{2}u_{\beta\alpha}+ \frac{i}{2}u_{\beta \beta} \Bigr) \Bigr]\]</span></p>
+<p><span class="math display">\[=\frac{1}{4} (u_{\alpha\alpha} + u_{\beta\beta})\]</span></p>
+<p>Entonces:</p>
+<p><span class="math display">\[2 \bar{a}_{12}u_{\xi\eta} = \frac{1}{2}\bar{a}_{12}(u_{\alpha\alpha} + u_{\beta\beta}) = - \bar{F}\]</span></p>
+<p><span class="math display">\[\therefore u_{\alpha\alpha} + u_{\beta\beta}= -\frac{2\bar{F}}{\bar{a}_{12}} \rightarrow \text{Forma canónica 2}\]</span></p>
+</div>
+</div>
+<div id="rectas-características" class="section level2 hasAnchor" number="1.4">
+<h2><span class="header-section-number">1.4</span> Rectas Características<a href="clasificación-de-las-ecuaciones-diferenciales-parciales..html#rectas-características" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Recordando la ecuación característica:</p>
+<p><span class="math display">\[a_{11} \frac{dy}{dz} + 2a_{12} \frac{dy}{dx} + a_{22} \frac{dz}{dx} = 0\]</span></p>
+<p>La cual se puede escribir como:</p>
+<p><span class="math display">\[a_{11} \left( \frac{dy}{dz} \right)^2 - 2 a_{12} \frac{dy}{dx} + a_{22} = \lambda_2\]</span></p>
+<p>Cuyas soluciones son :</p>
+<p><span class="math display">\[
+\frac{dy}{dx} = \frac{a_{12} + \sqrt{a_{12}^2 - a_{11} a_{22}}}{a_{11}} = \lambda_1
+\]</span></p>
+<p><span class="math display">\[
+\frac{dy}{dx} = \frac{a_{12} - \sqrt{a_{12}^2 - a_{11} a_{22}}}{a_{11}} = \lambda_2
+\]</span></p>
+<p>Sabemos que:</p>
+<p><span class="math display">\[\frac{dy}{dx} = \lambda_1\]</span></p>
+<p><span class="math display">\[y = \lambda_1 x + c_1 \quad \text{con} \quad c_1 = \text{cte}\]</span></p>
+<p>De igual manera:</p>
+<p><span class="math display">\[y = \lambda_2 x + c_2 \quad \text{con} \quad c_2 = \text{cte}\]</span></p>
+<p>Estas relaciones se consideran como rectas ecuacionales, junto con el
+lema #2 se tiene la función <span class="math inline">\(\varphi(x, y) = c\)</span> tal que permite encontrar
+la forma canónica.</p>
+<p>Por lo tanto, <span class="math display">\[y - \lambda_1 x = \varphi(x,y) = \xi\]</span>
+<span class="math display">\[y - \lambda_2 x = \Psi(x,y) = \eta\]</span></p>
+<p><strong>Obs.:</strong> Cuando se trabaje con ecuaciones tipo elípticas:</p>
+<p><span class="math display">\[\frac{dy}{dx} = z_{x} \quad \rightarrow \text{número complejo}\]</span></p>
+<p><span class="math display">\[\frac{dy}{dx} = z^{*}_{x} \quad \rightarrow \text{complejo conjugado}\]</span></p>
+<p>Donde:</p>
+<p><span class="math inline">\(a)\)</span>
+<span class="math display">\[y = z_x + \xi =  z_x + (\alpha + i\beta)\]</span></p>
+<p><span class="math inline">\(b)\)</span>
+<span class="math display">\[y = z^{*}_{x} + \eta = z^{*}_{x}+ (\alpha - i\beta)\]</span></p>
+<p>Sumando <span class="math inline">\(a)\)</span> y <span class="math inline">\(b)\)</span></p>
+<p><span class="math display">\[2y = (z_x + z^*_x) x + 2\alpha\]</span></p>
+<p><span class="math display">\[2y = 2{Re}(z_x) x + 2\alpha\]</span></p>
+<p><span class="math display">\[y = {Re}(z_x) x + \alpha\]</span></p>
+<p><span class="math display">\[\alpha= y - {Re}(z_x) x\]</span></p>
+<p>Restando <span class="math inline">\(a)\)</span> y <span class="math inline">\(b)\)</span></p>
+<p><span class="math display">\[0=(z-z^*)x + 2i\beta\]</span></p>
+<p><span class="math display">\[0=2i Im(z) x + 2i\beta\]</span></p>
+<p><span class="math display">\[\beta =- Im(z) x\]</span></p>
+<p>Por otro lado, para las ecuaciones para se tiene:</p>
+<p><span class="math display">\[
+\frac{dy}{dx} = \frac{a_{12} \pm \sqrt{a_{12}^2 - a_{11} a_{22}}}{a_{11}} = \lambda
+\]</span></p>
+<p>Sabemos que <span class="math inline">\(a_{12}^2 - a_{11} a_{22}=0\)</span> . Por lo que:</p>
+<p><span class="math display">\[\frac{dy}{dx} = \frac{a_{12}}{a_{11}} = \lambda\]</span></p>
+<p><span class="math display">\[y= \lambda x +c \]</span></p>
+<p>con <span class="math inline">\(c\)</span> constante. O bien:</p>
+<p><span class="math display">\[\xi = y-\lambda x\]</span></p>
+<p>Para obtener el valor de <span class="math inline">\(\eta\)</span> partiremos del jacobiano:</p>
+<p><span class="math display">\[\xi_x \eta_y - \xi_y \eta_x  \neq 0\]</span></p>
+<p><span class="math display">\[-\lambda \eta_y - \eta_x \neq 0\]</span></p>
+<p><span class="math display">\[\lambda \eta_y + \eta_x \neq 0\]</span></p>
+<p>Supongamos que <span class="math inline">\(\lambda \eta_y =0\)</span> entonces:</p>
+<p><span class="math display">\[\eta_x \neq 0\]</span></p>
+<p><span class="math display">\[\therefore \eta= c&#39; x\]</span></p>
+<p>con <span class="math inline">\(c&#39;\)</span> constante diferente de 0.</p>
+</div>
+<div id="función-vxy-uxy-elambda-x-mu-y" class="section level2 hasAnchor" number="1.5">
+<h2><span class="header-section-number">1.5</span> Función <span class="math inline">\(v(x,y) = u(x,y) e^{\lambda x + \mu y}\)</span><a href="clasificación-de-las-ecuaciones-diferenciales-parciales..html#función-vxy-uxy-elambda-x-mu-y" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Esta función nos ayudara a simplificar la forma canónica de las ecuaciones diferenciales parciales.
+Para ello se tienen que eligir apropiadamente los parametros <span class="math inline">\(\lambda\)</span> y <span class="math inline">\(\mu\)</span> para simplificar.</p>
+<p>Ecuación canónica a reducir <span class="math inline">\(\rightarrow\)</span> <span class="math inline">\(u_{xx}+u_{yy}+\alpha u_x+ \beta u_y + \gamma u = 0\)</span></p>
+<p>Procedemos a realizar una transformación considerando que:
+<span class="math display">\[v = u e^{\lambda x + \mu y}\]</span>
+por ende:
+<span class="math display">\[u= v e^{-(\lambda x + \mu y)}\]</span></p>
+<p>Ahora obtenemos las derivadas necesarias:
+<span class="math display">\[u_x=v_x e^{-(\lambda x + \mu y)} - \lambda ve^{-(\lambda x + \mu y)} = (v_x - \lambda v )e^{-(\lambda x + \mu y)} \]</span>
+<span class="math display">\[u_{xx}= -\lambda (v_x-\lambda v) e^{-(\lambda x + \mu y)} + (v_{xx}- \lambda v_x)e^{-(\lambda x + \mu y)}\]</span></p>
+<p>Tomando <span class="math inline">\(g=e^{-(\lambda x + \mu y)}\)</span> entoces <span class="math inline">\(g_x = -\lambda g\)</span> y <span class="math inline">\(g_y = -\mu g\)</span> y nuestras derivadas quedan como:
+<span class="math display">\[u_x= (v_x -\lambda v) g\]</span>
+<span class="math display">\[u_{xx} = (v_{xx}-2\lambda v_x + \lambda ^2 v) g\]</span>
+<span class="math display">\[u_y = (v g)_y = v_y g + g_y v = v_y g - \mu g v= (v_y -\mu v) g\]</span>
+<span class="math display">\[u_{yy}= (v_y - \mu v)_y g + g_y (v_y - \mu v)= (v_{yy}- \mu v_y) g + g_y (v_y - \mu  v)\]</span>
+<span class="math display">\[=(v_{yy}- \mu v_y) g - \mu g (v_y - \mu v)= (u_{yy} - 2u v_y + u^2 v)g\]</span></p>
+<p>Sustituyendo las derivadas encontradas en la ecuación original <span class="math inline">\(u_{xx}+u_{yy}+\alpha u_x +\beta_y+\gamma u = 0\)</span>, obtenemos:</p>
+<p><span class="math display">\[(v_{xx} - 2\lambda v_x + \lambda^2 v) g + (v_{yy} - 2\mu v_y + \mu^2 v) g + \alpha (v_x -\lambda v)g +  \beta (v_y- \mu v) g + \gamma v g = 0 \]</span></p>
+<p><span class="math display">\[v_{xx} g + v_{yy} g + (\alpha - 2\lambda) v_x g + (\beta -2 \mu) v_y  g+  (\mu^2+ \lambda^2 -\lambda\alpha-\mu\beta+ \gamma)gv=0\]</span><br />
+Podemos dividir todo por g, ya que <span class="math inline">\(g=e^{-(\lambda x +\mu y)}\neq 0\)</span>, por ende:
+<span class="math display">\[v_{xx}  + v_{yy}  + (\alpha - 2\lambda) v_x + (\beta -2 \mu) v_y  +  (\mu^2+ \lambda^2 -\lambda\alpha-\mu\beta+ \gamma)v=0\]</span><br />
+Si tomamos <span class="math inline">\(\lambda= \frac{\alpha}{2}\)</span> y <span class="math inline">\(\mu=\frac{\beta}{2}\)</span> los términos de <span class="math inline">\(v_x\)</span> y <span class="math inline">\(v_y\)</span> se cancelan
+<span class="math display">\[v_{xx}+v_{yy}+(\frac{\beta^2}{4}+\frac{\alpha^2}{4}-\frac{\alpha^2}{2}-\frac{\beta^2}{2}+\gamma)v=0\]</span>
+<span class="math display">\[\therefore v_{xx}+v_{yy}+(\gamma- \frac{\beta^2}{4}-\frac{\alpha^2}{2})v=0\]</span></p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+<a href="ecuaciones-diferenciales-parciales-de-primer-orden.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/01Capitulo.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf", "_main.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
